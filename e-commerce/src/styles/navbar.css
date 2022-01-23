@@ -1,0 +1,40 @@
+.navbar-container{
+    height: 50px;
+}
+
+.navbar-container-wrapper{
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search{
+    border: 0.5px solid lightgray;
+    display: flex;
+    padding: 5px;
+    margin-left: 20px;
+    align-items: center;
+}
+
+.input{
+    border:none
+}
+
+.middle-part h1{
+    text-align: center;
+}
+
+.right-part{
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.menu-item{
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 14px;
+    margin-left: 18px;
+    font-weight: bold;
+}
