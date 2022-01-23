@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const User = require("./../Models/User");
 const CryptoJS = require("crypto-js")
+const jwt = require("jsonwebtoken")
 
 const dotenv = require("dotenv")
 dotenv.config()
@@ -23,7 +24,6 @@ router.post("/register", async (req, res) => {
 })
 
 //LOGIN:
-
 router.post("/login", async (req, res) => {
     try {
         const user = await User.findOne({ username: req.body.username })
@@ -34,8 +34,13 @@ router.post("/login", async (req, res) => {
 
         pass !== req.body.password && res.status(401).json("Wrong Password")
 
+        const accessToken = jwt.sign({
+            id: user._id,
+            isPro: user.isPro
+        }, process.env.JWT_SEC)
+
         const { password, ...otherParams } = user._doc
-        res.status(200).json(otherParams)
+        res.status(200).json({ ...otherParams, accessToken })
     } catch (error) {
         res.status(500).json(error)
     }
