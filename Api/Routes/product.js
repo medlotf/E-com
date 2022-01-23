@@ -1,9 +1,7 @@
 const { verifyTokenAndPro } = require("./verifyToken")
 
 const router = require("express").Router()
-const CryptoJS = require("crypto-js")
 const Product = require("../Models/Product")
-const { route } = require("./user")
 
 //CREATE
 router.post("/", verifyTokenAndPro, async (req, res) => {
