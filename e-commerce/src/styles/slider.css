@@ -1,0 +1,73 @@
+.container{
+    height: 80vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.arrow{
+    padding: 15px;
+    padding-top: 16px;
+    background-color: rgba(235, 235, 235, 0.3);
+    border-radius: 30px;
+    margin: 10px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.left,.right{
+    top: 50vh;
+}
+
+.left{
+    left: 20px;
+}
+
+.right{
+    right: 20px;
+}
+
+.slider{
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imageContainer{
+    flex: 3;
+    width: 100%;
+}
+
+.imageContainer img {
+    width: 100%;
+    margin-top: 7%
+}
+
+.infoContainer{
+    height: 100%;
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.infoContainer h1{
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.infoContainer p{
+    font-size: 20px;
+    margin: 50px 0;
+    letter-spacing: 2px;
+}
+
+.infoContainer button{
+    border: 1px solid;
+    border-radius: 20px;
+    color: white;
+    font-size: 18px;
+    padding: 5px 20px;
+    width: 30%;
+}
