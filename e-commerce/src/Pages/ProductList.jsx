@@ -22,7 +22,7 @@ function ProductList(props) {
   }
 
   return (
-    <div>
+    <div className='p-list'>
       <NavBar />
       <Announcement />
       <div className="filter-container">
