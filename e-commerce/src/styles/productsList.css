@@ -1,19 +1,20 @@
 .filter-container{
     display: flex;
     justify-content: space-between;
+    width: 100%;
 }
 
-.filter{
+.filter-container .filter{
     margin: 20px;
 }
 
-.filter-text{
+.filter-container .filter-text{
     font-size: 20px;
     font-weight: 600;
     margin-right: 20px;
 }
 
-.filter select{
+.filter-container .filter select{
     padding: 10px;
     margin-right: 20px;
 }
