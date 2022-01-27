@@ -11,6 +11,7 @@ import {
   Redirect
 } from "react-router-dom";
 import { useSelector } from "react-redux"
+import Welcome from './Pages/Welcome';
 
 function App() {
   const user = useSelector(state => state.user.currentUser)
@@ -32,6 +33,9 @@ function App() {
           </Route>
           <Route path="/register">
             {user ? <Redirect to="/" /> : <Register />}
+          </Route>
+          <Route path="/confirm/:confirmationCode">
+            <Welcome />
           </Route>
         </Switch>
       </Router>
