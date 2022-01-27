@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import "./../styles/auth.css"
 import { login } from "../redux/api";
 import { useDispatch, useSelector } from "react-redux";
+import { Link } from 'react-router-dom';
+
 
 function Login(props) {
 
@@ -23,9 +25,8 @@ function Login(props) {
           <input placeholder="Username" onChange={(e) => setUsername(e.target.value)} />
           <input placeholder="Password" type="password" onChange={(e) => setPassword(e.target.value)} />
           <button onClick={handleClick}>Se connecter</button>
-          {error && <span className='erreur'>Un erreur est survenue...</span>}
           <a>Mot de passe oublié</a>
-          <a>Créer un compte</a>
+          <Link style={{ textDecoration: 'none' }} to='/register'><a>Créer un compte</a></Link>
         </form>
       </div>
     </div>
